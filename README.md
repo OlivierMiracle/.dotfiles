@@ -1,9 +1,9 @@
 ### My Dotfiles [Arch/QTile]
 My first rice on Arch distro using QTile.
-##Work in Progress...
+## Work in Progress...
 
-#Screenshots
+# Screenshots
 
-#Programs used
+# Programs used
 
-#Color palette
+# Color palette
