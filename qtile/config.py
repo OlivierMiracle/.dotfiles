@@ -175,7 +175,7 @@ screens = [
                 widget.TextBox(
                     text="󰣇",
                     fontsize=30,
-                    foreground=colors[2][0],
+                    foreground=colors[1][0],
                     background=colors[0][0],
                     **decoration_group
                     ),
