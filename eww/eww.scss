@@ -1,0 +1,18 @@
+.bar {
+    font-family: 'JetBrains Mono Nerd Font Mono', monospace;
+    font-size: 8px;
+    color: white;
+    background-color: rgba($color: #000000, $alpha: 0);
+}
+
+.bar-part {
+    border-radius: 20px;
+    border: 2px solid #ff0044;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    background-color: #252525;
+}
+
+.roundbutton {
+    font-size: 24px;
+}
