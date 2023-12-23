@@ -1,4 +1,5 @@
 #!/bin/sh
+setxkmap -layout pl
 
 picom &
 eww daemon &

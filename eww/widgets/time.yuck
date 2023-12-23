@@ -1,0 +1,7 @@
+(defwidget time []
+    (eventbox
+        (box :class "module" :space-evenly "false" :orientation "h"
+            (label :text {formattime(timestamp, "%R")} )
+        )
+    )
+)

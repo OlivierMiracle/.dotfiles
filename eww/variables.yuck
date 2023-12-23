@@ -1,0 +1,1 @@
+(defpoll timestamp :interval "1s" `date +%s`)

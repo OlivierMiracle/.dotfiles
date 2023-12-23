@@ -1,39 +1,4 @@
-(defwindow bar
-  :class "bar"
-  :monitor 0
-  :geometry (geometry :x "0px"
-                     :y "10px"
-                     :width "99%
-                     :anchor "top center")
-  :stacking "fg"
-  :reserve (struts :distance "40px" :side "top")
-  :windowtype "dock"
-  :wm-ignore false
+(include "variables.yuck")
 
-  (centerbox :orientation "horizontal" 
-    (box :class "bar-part"
-         :halign "start"
-    )
-    (box :class "bar-part"
-    )
-    (box :class "bar-part"
-         :halign "end"
-      (roundbutton :icon "󰅙")
-    )
-  )
-)
-
-(defwidget greeter [?text name]
-  (box :orientation "horizontal"
-       :halign "center"
-    text
-    (button :onclick "notify-send 'Hello' 'Hello, ${name}'" "Greet")
-  )
-)
-
-(defwidget roundbutton [?icon]
-  (box :class "roundbutton"
-       :width "20px"
-    icon
-  )
-)
+(include "widgets/bar.yuck")
+(include "widgets/menu.yuck")

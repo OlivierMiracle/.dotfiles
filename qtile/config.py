@@ -65,11 +65,11 @@ for i, (name) in enumerate(group_names, 1):
 
 layouts = [
     layout.Columns(
-        border_focus_stack=colors[2],
-        border_focus=colors[2],
-        border_normal=colors[0],
+        border_focus_stack=colors[8],
+        border_focus=colors[8],
+        border_normal=colors[2][2],
         border_on_single=True,
-        border_width=2,
+        border_width=1,
         margin=6,
         ),
     # layout.Max(),
@@ -94,7 +94,7 @@ layouts = [
 
 widget_defaults = dict(
     font="JetBrains Mono Nerd Font Mono",
-    background=colors[7][0],
+    background=colors[2][0],
     fontsize=12,
 )
 extension_defaults = widget_defaults.copy()
@@ -102,7 +102,7 @@ extension_defaults = widget_defaults.copy()
 decoration_group = {
     "decorations": [
         RectDecoration(
-            colour=colors[7][0], 
+            colour=colors[2][0], 
             radius=0,
             filled=True, 
             group=True,
@@ -123,7 +123,7 @@ decoration_group_start = {
         ),
         PowerLineDecoration(
             path="back_slash",
-            color=colors[0][0],
+            color=colors[0],
         ),
     ],
     "padding": 8,
@@ -140,7 +140,7 @@ decoration_group_end = {
         ),
         PowerLineDecoration(
             path="forward_slash",
-            color=colors[7][0],
+            color=colors[5],
         ),
     ],
     "padding": 8,
@@ -157,14 +157,14 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(
-                    block_highlight_text_color='FF0044',
+                    block_highlight_text_color=colors[3],
                     borderwidth=0,
                     fontsize=20,
                     **decoration_group_end
                     ),
                 widget.Spacer(
                     length=527,
-                    background=colors[0][0],
+                    background=colors[0],
                     **decoration_group_start
                     ),
                 widget.Clock(
@@ -175,8 +175,8 @@ screens = [
                 widget.TextBox(
                     text="󰣇",
                     fontsize=30,
-                    foreground=colors[1][0],
-                    background=colors[0][0],
+                    foreground=colors[1],
+                    background=colors[0],
                     **decoration_group
                     ),
                 widget.Clock(
@@ -186,7 +186,7 @@ screens = [
                     ),
                 widget.Spacer(
                     length=bar.STRETCH,
-                    background=colors[0][0],
+                    background=colors[0],
                     **decoration_group_start
                     ),
                 widget.Battery(
@@ -230,11 +230,11 @@ screens = [
                     ),
             ],
             30,
-            background=colors[0][0],
+            background=colors[0],
             margin=[6, 0, 6, 0],
         ),
 
-        wallpaper='~/Downloads/opeth.jpg',
+        wallpaper='~/.dotfiles/hollow.png',
         wallpaper_mode='fill',
 
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy

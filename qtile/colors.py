@@ -1,15 +1,15 @@
 colors = [
-    ( "00000000", "00000000", "00000000" ), # 0 Transparent
-    ( "ffffff"  , "ffffff"  , "ffffff"   ), # 1 White
-
-    ( "ff0044"  , "ff0044"  ,"ff0044"    ), # 2 primary pink
-    ( "a6e22e"  , "a6e22e"  ,"a6e22e"    ), # 3 primary green
-    ( "66d9ef"  , "66d9ef"  ,"66d9ef"    ), # 4 primary blue
-    ( "fd971f"  , "fd971f"  ,"fd971f"    ), # 5 primary orange
-    ( "ae81ff"  , "ae81ff"  ,"ae81ff"    ), # 6 primary violet
-
-    ( "1b1b1b"  , "1b1b1b"  ,"1b1b1b"    ), # 7 gray
-    ( "b4b4b4"  , "b4b4b4"  ,"b4b4b4"    ), # 8 light gray
+    ("00000000"),  # 0 Transparent
+    ("#d6d6d6"),    # 1 White
+    ("2e2f31",     # 2 Gray - Surface
+     "232429",     # 2 Gray - Surface Container High
+     "181920"),    # 2 Gray - Surface Container Low
+     ("a6e22e"),     # 3 green
+     ("fd971f"),     # 4 orange
+     ("ae81ff"),     # 5 purple
+     ("f92672"),     # 6 pink
+     ("66d9ef"),     # 7 blue
+     ("9b9fa4")      # 8 light gray
 ]
 
 ##  f92672 	    (249,38,114)
