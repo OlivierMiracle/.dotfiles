@@ -1,34 +1,51 @@
 (include "widgets/date.yuck")
 (include "widgets/time.yuck")
 
-(defwindow bar
-    :class "bar"
-    :monitor 0
-    :geometry (geometry :x "0px"
-                       :y "0px"
-                       :width "100%"
-                       :anchor "top center")
-    :stacking "fg"
-    :reserve (struts :distance "40px" :side "top")
-    :windowtype "dock"
-    :wm-ignore false
-    (box :class "bar-inside"
-      (centerbox :orientation "horizontal" 
-        (box :class "bar-part"
-            :halign "start"
-        )
-        (time)
-        (box :class "bar-part"
-            :halign "end"
-          (roundbutton :icon "󰅙")
-        )
-      )
-    )
-  )
+; (defwindow bar
+;     :class "bar"
+;     :monitor 0
+;     :geometry (geometry :x "0px"
+;                        :y "0px"
+;                        :width "100%"
+;                        :anchor "top center")
+;     :stacking "fg"
+;     :reserve (struts :distance "40px" :side "top")
+;     :windowtype "dock"
+;     :wm-ignore false
+;     (box :class "genwin bar-inside"
+;       (centerbox :orientation "horizontal" 
+;         (box :class "bar-part"
+;             :halign "start"
+;         )
+;         (time)
+;         (box :class "bar-part"
+;             :halign "end"
+;           (roundbutton :icon "󰅙")
+;         )
+;       )
+;     )
+;   )
   
-  (defwidget roundbutton [?icon]
-    (box :class "roundbutton"
-         :width "20px"
-      icon
-    )
-  )
+;   (defwidget roundbutton [?icon]
+;     (box :class "roundbutton"
+;          :width "20px"
+;       icon
+;     )
+;   )
+
+; (defwidget date []
+;   (eventbox
+;       (box :class "module" :space-evenly "false" :orientation "h" :spacing "3"
+;           (label :text " " :class "icon" )
+;           (label :text {formattime(timestamp, "%a %F")} )
+;       )
+;   )
+; )
+
+; (defwidget time []
+;   (eventbox
+;       (box :class "module" :space-evenly "false" :orientation "h"
+;           (label :text {formattime(timestamp, "%R")} )
+;       )
+;   )
+; )

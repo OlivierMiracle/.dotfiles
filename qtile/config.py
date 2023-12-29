@@ -1,11 +1,11 @@
-#  ________  _________  ___  ___       _______      
-# |\   __  \|\___   ___\\  \|\  \     |\  ___ \     
-# \ \  \|\  \|___ \  \_\ \  \ \  \    \ \   __/|    
-#  \ \  \\\  \   \ \  \ \ \  \ \  \    \ \  \_|/__  
-#   \ \  \\\  \   \ \  \ \ \  \ \  \____\ \  \_|\ \ 
-#    \ \_____  \   \ \__\ \ \__\ \_______\ \_______\
-#     \|___| \__\   \|__|  \|__|\|_______|\|_______|
-#           \|__|                                   
+#  ________   _________   ___   ___        _______      
+# |\   __  \ |\___   ___\|\  \ |\  \      |\  ___ \     
+# \ \  \|\  \\|___ \  \_|\ \  \\ \  \     \ \   __/|    
+#  \ \  \\\  \    \ \  \  \ \  \\ \  \     \ \  \_|/__  
+#   \ \  \\\  \    \ \  \  \ \  \\ \  \____ \ \  \_|\ \ 
+#    \ \_____  \    \ \__\  \ \__\\ \_______\\ \_______\
+#     \|___| \__\    \|__|   \|__| \|_______| \|_______|
+#           \|__|                                       
 
 import os
 import subprocess
@@ -27,12 +27,12 @@ from colors import colors
 
 @hook.subscribe.startup_once
 def startup_once():
-    home = os.path.expanduser('~/.config/qtile/autostart.sh')
+    home = os.path.expanduser('~/.config/qtile/scripts/autostart.sh')
     subprocess.Popen([home])
 
-@hook.subscribe.startup_complete
-def startup_completee():
-    qtile.cmd_simulate_keypress([], 'Home')
+# @hook.subscribe.startup_complete
+# def startup_completee():
+#     qtile.cmd_simulate_keypress([], 'Home')
 
 ##################################################
 #

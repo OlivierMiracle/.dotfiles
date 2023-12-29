@@ -1,6 +1,21 @@
-import popups
+import os
+import subprocess
 from libqtile.config import Key
 from libqtile.lazy import lazy
+
+isOpened = False
+
+def toggle_eww(qtile):
+    global isOpened
+    eww = os.path.expanduser('~/.config/qtile/scripts/eww.sh')
+    
+    if isOpened:
+        isOpened = False
+        subprocess.Popen([eww, "--close"])
+    else:
+        isOpened = True
+        subprocess.Popen([eww, "--open"])
+
 
 mod = "mod4"
 
@@ -67,5 +82,5 @@ keys = [
     #       Keys for popups
     #####
 
-    Key([], "Home", lazy.function(popups.show_wall_screen))
+    Key([], "Home", lazy.function(toggle_eww))
 ]

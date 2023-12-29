@@ -1,8 +1,0 @@
-(defwidget date []
-    (eventbox
-        (box :class "module" :space-evenly "false" :orientation "h" :spacing "3"
-            (label :text " " :class "icon" )
-            (label :text {formattime(timestamp, "%a %F")} )
-        )
-    )
-)

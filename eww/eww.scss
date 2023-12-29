@@ -9,29 +9,26 @@ $pink: #f92672;  // 6 pink
 $blue: #66d9ef;  // 7 blue
 $outline: #9b9fa4;  // 8 light gray
 
-
 * {
+	all:unset;
     color: $white;
     font-family: 'JetBrains Mono Nerd Font Mono', monospace;
 }
 
 .bar {
-    font-size: 14px;
+	font-size: 14px;
     font-family: 'JetBrains Mono Nerd Font Mono', monospace;
     background-color: rgba($color: #000000, $alpha: 0);
 }
 
-.bar-inside {
-    margin: 8px;
-    border-radius: 0px;
-    border: 1px solid $outline;
-    background-color: $surface-container;
+.bar-part {
+	
+	padding-left: 15px;
+    padding-right: 15px;
 }
 
-.bar-part {
-
-    padding-left: 15px;
-    padding-right: 15px;
+.bar-inside {
+	margin: 8px;
 }
 
 .roundbutton {
@@ -50,135 +47,123 @@ $outline: #9b9fa4;  // 8 light gray
     font-size: 20px;
 }
 
-
 /** Background ***************************************/
 .bg {
-	background-color: #474D59;
+	background-color: $surface;
 	opacity: 1;
 }
 
 /** Generic window ***********************************/
+
 .genwin {
     font-family: 'JetBrains Mono Nerd Font Mono', monospace;
-	background-color: #2E3440;
-	border-radius: 16px;
+	border-radius: 0px;
+	border: 1px solid $outline;
+	background-color: $surface-container;
+}
+
+.icon {
+    font-family: 'JetBrains Mono Nerd Font Mono', monospace;
+	font-size : 90px;
+}
+
+/** Colors *******************************************/
+
+.pink {
+	color: $pink;
+}
+.green {
+	color: $green;
+}
+.orange {
+	color: $orange;
+}
+.blue {
+	color: $blue;
+}
+.purple {
+	color: $purple;
 }
 
 /** Profile ******************************************/
+
 .face {
-	background-size: 200px;
-	min-height: 200px;
-	min-width: 200px;
-	margin: 65px 0px 0px 0px;
-	border-radius: 100%;
+	color: $white;
+	font-size: 256px;
 }
 
 .fullname {
-	color: $pink;
 	font-size : 30px;
 	font-weight : bold;
+	margin: -120px 0px 0px 0px;
 }
 
 .username {
-	color: $blue;
 	font-size : 22px;
 	font-weight : bold;
-	margin : -15px 0px 0px 0px;
+	margin : -60px 0px 0px 0px;
 }
 
 /** System ********************************************/
-.iconcpu, .iconmem, .iconbright, .iconbat {
-	font-size : 32px;
-	font-weight : normal;
-}
-.iconcpu {
-	color: $pink;
-}
-.iconmem {
-	color: $green;
-}
-.iconbright {
-	color: $orange;
-}
-.iconbat {
-	color: $blue;
-}
 
-.cpu_bar, .mem_bar, .bright_bar, .bat_bar, scale trough {
+.scale, scale trough {
 	all: unset;
-	background-color: $surface;
-	border-radius: 16px;
+	border: 1px solid $outline;
+	background-color: $surface-container;
 	min-height: 28px;
 	min-width: 240px;
+
+	&_icon {
+		font-size : 32px;
+		font-weight : normal;
+	}
 }
 
-.cpu_bar, .mem_bar, .bright_bar, .bat_bar, scale trough highlight {
+.scale, scale trough highlight {
 	all: unset;
-	border-radius: 16px;
-}
-
-.cpu_bar scale trough highlight {
-	background-color: $pink;
-}
-.mem_bar scale trough highlight {
-	background-color: $green;
-}
-.bright_bar scale trough highlight {
-	background-color: $orange;
-}
-.bat_bar scale trough highlight {
-	background-color: $blue;
+	border-radius: 0px;
+	background-color: $white;
 }
 
 /** Clock ********************************************/
-.time_hour, .time_min {
+
+.time_hour {
 	color: $white;
 	font-size : 70px;
 	font-weight : bold;
-}
-.time_hour {
 	margin : 15px 0px 0px 20px;
-}
-.time_min {
-	margin : 0px 0px 10px 0px;
 }
 
 .time_mer {
-	color: $green;
 	font-size : 40px;
 	font-weight : bold;
 	margin : 20px 0px 0px 0px;
 }
 
 .time_day {
-	color: $orange;
 	font-size : 30px;
 	font-weight : normal;
-	margin : 0px 0px 20px -20px;
+	margin : 0px 0px 20px 0px;
 }
 
 /** Uptime ********************************************/
-.icontimer {
-    font-family: 'JetBrains Mono Nerd Font Mono', monospace;
-	color: $pink;
-	font-size : 90px;
-}
 
 .uphour {
 	color: $white;
     font-family: 'JetBrains Mono Nerd Font Mono', monospace;
-	font-size : 42px;
+	font-size : 36px;
 	font-weight : bold;
 }
 
 .upmin {
 	color: $white;
     font-family: 'JetBrains Mono Nerd Font Mono', monospace;
-	font-size : 32px;
+	font-size : 24px;
 	font-weight : bold;
 }
 
 /** Music ***************************************/
+
 .album_art {
 	background-size: 240px;
 	min-height: 240px;
@@ -234,7 +219,8 @@ $outline: #9b9fa4;  // 8 light gray
 	margin : 10px 0px 0px 0px;
 }
 
-/** Weather ***************************************/
+/** Networking ***************************************/
+
 .iconweather {
 	font-size : 120px;
 	font-weight : normal;
@@ -242,14 +228,12 @@ $outline: #9b9fa4;  // 8 light gray
 }
 
 .label_temp {
-	color : $blue;
 	font-size : 80px;
 	font-weight : bold;
 	margin : -15px 30px 0px 0px;
 }
 
 .label_stat {
-	color : $pink;
 	font-size : 38px;
 	font-weight : bold;
 }
@@ -260,103 +244,48 @@ $outline: #9b9fa4;  // 8 light gray
 	font-weight : normal;
 }
 
-/** Applications ***************************************/
-.appbox {
-	margin : 15px 0px 0px 25px;
-}
-
-.app_fox, .app_telegram, .app_discord, .app_terminal,
-.app_files, .app_geany, .app_code, .app_gimp, .app_vbox {
-    background-repeat: no-repeat;
-	background-size: 64px;
-	min-height: 64px;
-	min-width: 64px;
-	margin: 8px 8px 0px 8px;
-}
-
-.app_fox {}
-.app_telegram {}
-.app_discord {}
-.app_terminal {}
-.app_files {}
-.app_geany {}
-.app_code {}
-.app_gimp {}
-.app_vbox {}
-
-/** Links ***************************************/
-.iconweb, .iconmail {
-	color: $white;
-	font-size : 70px;
-	font-weight : normal;
-}
-.iconmail {
-	color: $pink;
-}
-
-.github {
-	background-color: $surface;
-	border-radius: 16px;
-}
-.reddit {
-	background-color: $pink;
-	border-radius: 16px;
-}
-.twitter {
-	background-color: $blue;
-	border-radius: 16px;
-}
-.youtube {
-	background-color: $pink;
-	border-radius: 16px;
-}
-.mail {
-	background-color: $white;
-	border-radius: 16px;
-}
-
-.mailbox {
-	background-color: $white;
-	border-radius: 10px;
-	margin: 48px 0px 48px 0px;
-}
-.label_mails {
-	color: $surface;
-	font-size : 32px;
-	font-weight : bold;
-	margin: 0px 12px 0px 12px;
-}
-
 /** Power buttons ***************************************/
-.btn_logout, .btn_sleep, .btn_reboot, .btn_poweroff {
-	font-size : 48px;
-	font-weight : bold;
-}
 
-.btn_logout {
-	color: $pink;
-}
-.btn_sleep {
-	color: $green;
-}
-.btn_reboot {
-	color: $orange;
-}
-.btn_poweroff {
-	color: $blue;
+.btn {
+	&:hover {
+		background-color: $surface;
+	}
+
+	&_logout, &_sleep, &_reboot, &_poweroff {
+		font-size : 96px;
+		font-weight : bold;
+	}
+
+	&_logout {
+		color: $pink;
+	}
+	&_sleep {
+		color: $green;
+	}
+	&_reboot {
+		color: $orange;
+	}
+	&_poweroff {
+		color: $blue;
+	}
 }
 
 /** Home folders ***************************************/
+
 .hddbox {
 	background-color: $surface;
 	border-radius: 10px;
 	margin : 15px;
+
+    background-color: rgba($color: #000000, $alpha: 0);
 }
 .hddicon {
 	color: $blue;
 	font-size : 70px;
 	font-weight : normal;
 	margin : 25px 20px 25px 40px;
+
+    background-color: rgba($color: #000000, $alpha: 0);
 }
 .hdd_label {
 	color: $white;
@@ -370,50 +299,18 @@ $outline: #9b9fa4;  // 8 light gray
 	font-weight : bold;
 }
 
-.iconfolder1, .iconfolder2, .iconfolder3, .iconfolder4, .iconfolder5, .iconfolder6  {
-	font-size : 32px;
-	font-weight : normal;
-	margin : 0px 0px 0px 75px;
-}
-.iconfolder1 {
-	color: $pink;
-}
-.iconfolder2 {
-	color: $green;
-}
-.iconfolder3 {
-	color: $orange;
-}
-.iconfolder4 {
-	color: $blue;
-}
-.iconfolder5 {
-	color: $purple;
-}
-.iconfolder6 {
-	color: $blue;
-}
-
-.label_folder1, .label_folder2, .label_folder3, .label_folder4, .label_folder5, .label_folder6  {
+.folder {
 	font-size : 22px;
 	font-weight : normal;
 	margin : 0px 0px 0px 30px;
-}
-.label_folder1 {
-	color: $pink;
-}
-.label_folder2 {
-	color: $green;
-}
-.label_folder3 {
-	color: $orange;
-}
-.label_folder4 {
-	color: $blue;
-}
-.label_folder5 {
-	color: $purple;
-}
-.label_folder6 {
-	color: $blue;
+
+	&:hover {
+		background-color: $surface;
+	}
+
+	&_icon {
+		font-size: 32px;
+		margin-left: 32px;
+		margin-right: 16px;
+	}
 }

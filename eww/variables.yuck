@@ -1,1 +1,24 @@
+(defvar IMAGE "images/profile.jpg")
+(defvar NAME "Arch Linux")
+(defvar UNAME "HP EliteBook 1040 G8")
+
+;; System vars
+(defpoll HOST :interval "5s" `hostname`)
+(defpoll CPU_USAGE :interval "5s" 
+`mpstat -H | grep all | awk '{print (100 - $13)}'`)
+(defpoll MEM_USAGE :interval "1s" 
+`free -m | grep Mem | awk '{print ($3/$2)*100}'`)
+(defpoll BATTERY :interval "5s" 
+`cat /sys/class/power_supply/BAT0/capacity`)
+
+;; Time vars
 (defpoll timestamp :interval "1s" `date +%s`)
+
+;; Uptime vars
+(defpoll UPHOUR :interval "5s" `uptime -p | awk '{print $2 " " $3}' | sed 's/,//g'`)
+(defpoll UPMIN :interval "5s" `uptime -p | awk '{print $4 " " $5}'`)
+
+;; Tenwork vars
+(defpoll NET_STATUS :interval "2s" `nmcli g | awk '{print $1 }' | tail -n 1`)
+(defpoll NET_WIFI :interval "2s" `nmcli g | awk '{print $4}' | tail -n 1`)
+
